@@ -1,0 +1,18 @@
+= Cartolify
+
+Cartolify is a Library, and the main engine, of my new project for keep tracks of my budget.
+This library has 3 functions:
+
+* Return the Bank Account Balance,
+* Return the last month transactions list, and
+* Sync the transactions with a local DB
+
+== Contributing to cartolify
+ 
+For now is not possible, beacuse we are just starting
+
+== Copyright
+
+Copyright (c) 2012 Patricio Bruna. See LICENSE.txt for
+further details.
+

@@ -11,3 +11,6 @@ group :development do
   gem "jeweler", "~> 1.8.3"
   gem "turn"
 end
+
+gem 'mechanize'
+gem 'nokogiri'

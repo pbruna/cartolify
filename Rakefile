@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "cartolify"
   gem.homepage = "http://github.com/pbruna/cartolify"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: Lib for getting info of Chilean Banks} 
-  gem.description = %Q{TODO: This is the Engine for my Budget System} 
+  gem.summary = %Q{ Lib for getting info of Chilean Banks} 
+  gem.description = %Q{This is the Engine for my Budget System} 
   gem.email = "pbruna@gmail.com"
   gem.authors = ["Patricio Bruna"]
   # dependencies defined in Gemfile

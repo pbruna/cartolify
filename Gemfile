@@ -14,3 +14,4 @@ end
 
 gem 'mechanize'
 gem 'nokogiri'
+gem 'json'

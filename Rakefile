@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{This is the Engine for my Budget System} 
   gem.email = "pbruna@gmail.com"
   gem.authors = ["Patricio Bruna"]
+  gem.version = File.exist?('VERSION') ? File.read('VERSION') : "0.0" 
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -36,7 +37,7 @@ task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = File.exist?('VERSION') ? File.read('VERSION') : "0.1"
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "cartolify #{version}"

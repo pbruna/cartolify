@@ -43,10 +43,13 @@ class CHILEEMPRESASBank < Bank
         total = convert_money_to_integer(mov[4]) * -1 
       end
       
+      saldo = convert_money_to_integer(mov[6])
+      
       transaccion_info = {
 				:date => Date.parse(mov[0]),
 				:description => mov[1],
-				:total => total
+				:total => total,
+				:saldo => saldo
 			}
 			transactions << Transaction.new(transaccion_info)
     end

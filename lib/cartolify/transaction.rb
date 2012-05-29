@@ -1,5 +1,5 @@
 class Transaction
-	attr_reader :total, :date, :description, :type, :saldo
+	attr_reader :total, :date, :description, :type, :saldo, :balance
 
 	def initialize(hash)
 		@total = hash[:total]

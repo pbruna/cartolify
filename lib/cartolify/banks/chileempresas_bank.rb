@@ -7,6 +7,7 @@ class CHILEEMPRESASBank < Bank
   LOGIN_FORM_NAME = "theform"
   BROWSER = "Mac FireFox"
   START_URL = "https://www.empresas.bancochile.cl/CCOLSaldoMovimientosWEB/selectorCuentas.do?accion=initSelectorCuentas&moneda=CTD&cuenta="
+  FONDOS_MUTUO_URL = "https://www.empresas.bancochile.cl/cgi-bin/cgiinvbanch"
 
   def initialize(account = {})
     @company_rut = account[:company_rut]
@@ -55,6 +56,13 @@ class CHILEEMPRESASBank < Bank
     end
     transactions
   end
+  
+  def balance_fondos_mutuos
+    session.get(FONDOS_MUTUO_URL)
+    string_balance = session.page.root.css("table")[4].css("tr")[2].css("td").last.text.lstrip
+    convert_money_to_integer(string_balance)
+  end
+  
 
   def new_session
     agent = Mechanize.new

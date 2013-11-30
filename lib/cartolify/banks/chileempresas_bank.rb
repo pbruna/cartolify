@@ -25,7 +25,7 @@ class CHILEEMPRESASBank < Bank
     # We make sure we are on the first page
     session.get("#{START_URL}#{self.account_number}")
     # The value is inside a div#saldos in the second td
-    string_balance = clean_string(session.page.root.css("#estaCuen").css(".detalleSaldosMov").css("td").last)
+    string_balance = clean_string(session.page.root.css("#estaCuen").css(".detalleSaldosMov").css("td")[1])
     # The above result has an ":" character that we need to remove
     string_balance.gsub!(/:/,'')
     # Remove de $ simbol and the dots
